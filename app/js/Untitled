@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Law Office of Joseph D. Meares</title>
+    <meta name="description" content="We invite any questions you may have about the services we offer and are confident that we can provide you with the highest quality of legal representation. Mr. Meares is available for presentations on any area of practice and inquiry is invited should there be interest.">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="The Law Office of Joseph D. Meares" />
+    <meta property="og:website" content="The Law Office of Joseph D. Meares" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="We invite any questions you may have about the services we offer and are confident that we can provide you with the highest quality of legal representation. Mr. Meares is available for presentations on any area of practice and inquiry is invited should there be interest."
+    />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Glegoo:400,700|Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/pintsize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+    <!-- Primary Page Layout -->
+    <header class="flex flex--auto">
+        <div class="logo-container">
+            <div class="logo">
+                <a href="">
+                    <img src="img/logo.png" alt="Meares Law">
+                </a>
+            </div>
+            <div class="collapsed_nav">
+                <button class="hamburger"></button>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav-items-container">
+                <ul class="nav-items">
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About the Firm</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="hero">
+        </div>
+    </header>
+
+    <div class="flex flex--auto">
+
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+
+    </div>
+
+    <div class="flex flex--auto">
+
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+        <div class="col">
+            <div class="demo--content-block"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- End Document -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/site.js"></script>
+</body>
+
+</html>
