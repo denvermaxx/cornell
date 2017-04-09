@@ -25,20 +25,40 @@ include 'inc/nav.php';
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
         nostrud exercitation ullamco laboris nisi ut aliquip ex ea consequat.
       </p>
-      <select>Shipping Method</select>
-      <table class="shipping_price_qty" cellpadding="0" style="border:1px #742b02 solid;">
-      <tr bgcolor="#742b02" style="color:#fff; text-align:center;">
-        <td>Price</td>
-        <td>QTY</td>
-      </tr>
-      <tr>
-        <td>$26.50</td>
-        <td>1 Box / 50lbs</td>
-      </tr>
+
+      <form>
+        <select name="shippingMethod">
+          <option value="">Shipping Method</option>
+          <option value="M">Pickup </option>
+          <option value="F">Service Delivery&nbsp;&nbsp;&nbsp;+$2.00 </option>
+          <option value="F">Tailgate Delivery&nbsp;&nbsp;&nbsp;+$1.00</option>
+        </select>
+      </form>
+
+      <table class="shipping_price_qty" cellpadding="0">
+        <tr bgcolor="#742b02" style="color:#fff; text-align:center;">
+          <th class="table_price">Price</th>
+          <th class="table_qty">QTY</th>
+        </tr>
+        <tr>
+          <td class="table_price">$26.50</td>
+          <td class="table_qty">1 Box / 50lbs</td>
+        </tr>
+        <tr>
+          <td class="table_price">$25.50</td>
+          <td class="table_qty">2+ Boxes / 100-450lbs</td>
+        </tr>
+        <tr>
+          <td class="table_price">$25.50</td>
+          <td class="table_qty">2+ Boxes / 100-450lbs</td>
+        </tr>
       </table>
 
     </div>
-    <div class="col--12 col__md--8">
+    <div id="product_photos" class="col--12 col__md--8">
+      <div class="product_slider">
+        <img src="img/product_fpo.jpg">
+      </div>
     </div>
 </section>
 
