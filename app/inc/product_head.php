@@ -8,8 +8,8 @@
             </div>
             <div class="product-breadcrumbs flex flex--middle">
                 <div class="breadcrumb_container col--12 col__md--6">
-                    <a href="" class="">Home</a>&nbsp;&nbsp;&rsaquo;&nbsp;&nbsp;
-                    <a href="" class="">Shop</a>&nbsp;&nbsp;&rsaquo;&nbsp;&nbsp;
+                    <a href="" class="">Home</a>&nbsp;&nbsp; &rsaquo; &nbsp;&nbsp;
+                    <a href="" class="">Shop</a>&nbsp;&nbsp; &rsaquo; &nbsp;&nbsp;
                     <a href="" class="">Clay</a>
                 </div>
                 <div class="product_search col--12 col__md--6">

@@ -1,17 +1,16 @@
 <?php
 include 'inc/head.php';
 include 'inc/nav.php';
-include 'inc/product_head.php';
+include 'inc/class_head.php';
 ?>
 
-    <section id="content" class="category_page flex flex--between">
-        <h2 class="col col--12">Categories</h2>
-        <?php include 'inc/side_navigation.php' ?>
-        <div id="category_container" class="col--12 col__md--9">
+    <section id="content" class="class_page flex flex--between">
+        <!-- <h2 class="col col--12">Classes</h2> -->
+        <div id="category_container" class="col--12">
           <div class="category col col--12">
               <div class="category-link flex flex--bottom">
                     <a href="" class="category-title flex flex--between flex--middle">
-                      Air Dry &amp; Modeling Clays
+                      Class One
                       <span>&rsaquo;<span>
                     </a>
               </div>
@@ -19,17 +18,17 @@ include 'inc/product_head.php';
           <div class="category col col--12">
               <div class="category-link flex flex--bottom">
                     <a href="" class="category-title flex flex--between flex--middle">
-                      Casting Slip
+                      Class Two
                       <span>&rsaquo;<span>
                     </a>
               </div>
           </div>
-          <div "class_slides" id=class="category col col--12">
+          <div id="class_slides" class="category col col--12">
               <div class="category-link flex flex--bottom">
-                    <a href="" class="category-title flex flex--between flex--middle">
-                      Casting Slip
+                    <!-- <a href="" class="category-title flex flex--between flex--middle">
+                      Previous Classes
                       <span>&rsaquo;<span>
-                    </a>
+                    </a> -->
               </div>
           </div>
         </div>

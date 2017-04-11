@@ -101,6 +101,7 @@ nav {
 
     .nav-items-container {
         margin-top: 25px;
+        display: none;
 
         > ul {
             display: flex;
@@ -533,9 +534,8 @@ footer {
         align-content: center;
         justify-content: center;
         height: 85px;
-        // padding-left: 50px;
         h2 {
-            font-size: 79px;
+            font-size: 50px;
             font-family: "Open Sans";
             font-weight: 300;
             color: #fff;
@@ -548,10 +548,10 @@ footer {
     .product-breadcrumbs {
         color: #fff;
         width: 100%;
-        padding: 15px 50px;
+        padding: 15px 0;
         bottom: 0;
         background: $red;
-        padding-left: 50px;
+        // padding-left: 50px;
         justify-content: center;
         text-align: center;
 
@@ -645,6 +645,9 @@ footer {
 
 #category_container {
     margin-top: 25px;
+    &:first-child{
+      margin: 0;
+    }
 
     .category {
         padding-bottom: 25px;
@@ -844,6 +847,61 @@ footer {
   }
 }
 
+
+
+//CLASSES
+.class-head {
+    background: url("../img/class.jpg") no-repeat center center / cover;
+    position: relative;
+    height: 250px;
+
+    .class-title {
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        height: 85px;
+        h2 {
+            font-size: 50px;
+            font-family: "Open Sans";
+            font-weight: 300;
+            color: #fff;
+            text-transform: uppercase;
+            // margin: 0 0 50px 50px;
+            // line-height: ;
+        }
+    }
+
+    .class-breadcrumbs {
+        color: #fff;
+        width: 100%;
+        padding: 15px 0;
+        bottom: 0;
+        background: $red;
+        // padding-left: 50px;
+        justify-content: center;
+        text-align: center;
+
+        a {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+    }
+
+    input[type="search"] {
+        margin-top: 15px;
+        border: 1px #fff solid;
+        width: 225px;
+        // height: 28px;
+        padding: 10px;
+        font-size: 12px;
+        color: #fff;
+        background: $red;
+        background: url("../img/search_white.png") no-repeat 97% center / 10%;
+    }
+}
+
+
+
 // =========================================
 // DESKTOP SYLES
 // =========================================
@@ -896,6 +954,7 @@ footer {
 
         .nav-items-container {
             margin: 0;
+            display: block !important;
 
             > ul {
                 display: flex;
@@ -1009,16 +1068,15 @@ footer {
         }
     }
 
-    .product-head {
+    .product-head, .class-head {
         height: 350px;
 
-        .product-title {
+        .product-title, .class-title {
             width: 100%;
             align-content: flex-end;
             justify-content: flex-start;
             height: 285px;
-            // padding-left: 50px;
-            h2 {
+                h2 {
                 font-size: 79px;
                 font-family: "Open Sans";
                 font-weight: 300;
@@ -1028,12 +1086,13 @@ footer {
             }
         }
 
-        .product-breadcrumbs {
+        .product-breadcrumbs, .class-breadcrumbs {
             justify-content: space-between;
             text-align: left;
+            padding: 15px 50px;
         }
 
-        .product_search {
+        .product_search, .class_search {
             align-self: flex-end;
             text-align: right;
         }
