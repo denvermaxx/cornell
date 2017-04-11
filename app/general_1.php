@@ -7,8 +7,6 @@ include 'inc/nav.php';
 ?>
 
     <!-- Primary Page Layout -->
-
-
     <section id="general-1" class="flex flex--between">
         <div class="col col--12">
           <h3>
@@ -32,7 +30,7 @@ include 'inc/nav.php';
         <div class="col col--12 col__md--3">
           <img src="img/product.png">
         </div>
-        <div class="col--12 col__md--9">
+        <div class="col col--12 col__md--9">
           <h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h3>
@@ -58,67 +56,8 @@ include 'inc/nav.php';
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non pellentesque urna. In hac habitasse platea dictumst. Pellentesque interdum libero ut egestas ullamcorper. Sed quis efficitur turpis. Nam at interdum diam. Duis vel ultricies lorem. Nunc molestie mi odio, id scelerisque erat ornare sit amet. Suspendisse vel erat at magna elementum blandit. Donec aliquam ac purus at facilisis. Cras laoreet diam eu neque semper, ac mollis lectus rutrum. Integer eleifend interdum viverra. Aenean eget pellentesque ante. Proin sit amet interdum tellus. Phasellus id metus eu risus cursus gravida at in dui.
           </p>
         </div>
-        <div class="col--12 col__md--6">
+        <div class="col col--12 col__md--6">
           <img src="img/product.png">
-        </div>
-    </section>
-
-
-
-    <section id="home_products" class="flex flex--between">
-        <div class="col col--12">
-            <h2>Lorem Ipsum Dolor</h2>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="home_classes" class="flex flex--auto">
-        <div class="col col--12 col__md--4">
-            <div class="feature-side red">
-                <div class="text">
-                    <span>Classes, Workshops, &amp; Demonstrations at Cornell Studio Supply</span>
-                    <p>Brought to you by amazingly talented and awesomely fun instructors!</p>
-                    <a href="" class="button">see class schedule</a>
-                </div>
-            </div>
-        </div>
-        <div class="col col--12 col__md--8 hide_mobile">
-            <div class="featured"></div>
         </div>
     </section>
 

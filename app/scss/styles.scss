@@ -534,6 +534,7 @@ footer {
         align-content: center;
         justify-content: center;
         height: 85px;
+
         h2 {
             font-size: 50px;
             font-family: "Open Sans";
@@ -645,8 +646,9 @@ footer {
 
 #category_container {
     margin-top: 25px;
-    &:first-child{
-      margin: 0;
+
+    &:first-child {
+        margin: 0;
     }
 
     .category {
@@ -716,7 +718,8 @@ footer {
 }
 
 #product_details {
-  padding-top: 0;
+    padding-top: 0;
+
     .product_title {
         font-size: 36px;
         font-weight: 300;
@@ -795,9 +798,12 @@ footer {
     }
 
     #product_photos {
+        order: -1;
+
         .product_slider {
-            margin-left: 12.5px;
+            // margin-left: 12.5px;
             border: 1px #742b02 solid;
+            margin-bottom: 25px;
 
             img {
                 width: 100%;
@@ -806,27 +812,30 @@ footer {
     }
 }
 
+#general-1,
+#general-2,
+#general-3 {
+    padding-top: 0;
 
+    h3 {
+        font-size: 36px;
+        font-weight: 300;
+        color: $black;
+        text-transform: uppercase;
+        line-height: 38px;
+        display: block;
+        margin-bottom: 30px;
+    }
 
-#general-1, #general-2, #general-3{
-    h3{
-          font-size: 36px;
-          font-weight: 300;
-          color: $black;
-          text-transform: uppercase;
-          line-height: 38px;
-          display: block;
-          margin-bottom: 30px;
-      }
-    h4{
-          font-size: 24px;
-          font-weight: 300;
-          color: $red;
-          // text-transform: uppercase;
-          line-height: 26px;
-          display: block;
-          margin-bottom: 30px;
-      }
+    h4 {
+        font-size: 24px;
+        font-weight: 300;
+        color: $red;
+        // text-transform: uppercase;
+        line-height: 26px;
+        display: block;
+        margin-bottom: 30px;
+    }
 
     p {
         font-size: 16px;
@@ -836,19 +845,24 @@ footer {
         display: block;
         padding-bottom: 25px;
         margin: 0;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
-    img{
-      width: calc(100% - 13px);
+
+    img {
+        width: 100%;
+        // width: calc(100% - 13px);
+        margin-bottom: 25px;
     }
 }
-#general-3{
-  img{
-    float: right;
-  }
+
+#general-3 {
+    img {
+        margin-top: 25px;
+    }
 }
-
-
-
 //CLASSES
 .class-head {
     background: url("../img/class.jpg") no-repeat center center / cover;
@@ -860,6 +874,7 @@ footer {
         align-content: center;
         justify-content: center;
         height: 85px;
+
         h2 {
             font-size: 50px;
             font-family: "Open Sans";
@@ -899,9 +914,6 @@ footer {
         background: url("../img/search_white.png") no-repeat 97% center / 10%;
     }
 }
-
-
-
 // =========================================
 // DESKTOP SYLES
 // =========================================
@@ -1068,15 +1080,18 @@ footer {
         }
     }
 
-    .product-head, .class-head {
+    .class-head,
+    .product-head {
         height: 350px;
 
-        .product-title, .class-title {
+        .class-title,
+        .product-title {
             width: 100%;
             align-content: flex-end;
             justify-content: flex-start;
             height: 285px;
-                h2 {
+
+            h2 {
                 font-size: 79px;
                 font-family: "Open Sans";
                 font-weight: 300;
@@ -1086,13 +1101,15 @@ footer {
             }
         }
 
-        .product-breadcrumbs, .class-breadcrumbs {
+        .class-breadcrumbs,
+        .product-breadcrumbs {
             justify-content: space-between;
             text-align: left;
             padding: 15px 50px;
         }
 
-        .product_search, .class_search {
+        .class_search,
+        .product_search {
             align-self: flex-end;
             text-align: right;
         }
@@ -1158,6 +1175,27 @@ footer {
         span {
             font-size: 60px;
             margin-top: -15px;
+        }
+    }
+
+    #product_details {
+        #product_photos {
+            order: 2;
+
+            .product_slider {
+                margin-left: 12.5px;
+                border: 1px #742b02 solid;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #general-3 {
+        img {
+            margin-top: 0;
         }
     }
 }
