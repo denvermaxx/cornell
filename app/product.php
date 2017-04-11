@@ -55,17 +55,16 @@ include 'inc/nav.php';
       </table>
 
     </div>
-    <div id="product_photos" class="col--12 col__md--8">
+    <div id="product_photos" class="col col--12 col__md--8">
       <div class="product_slider">
         <img src="img/product_fpo.jpg">
       </div>
     </div>
 </section>
 
-
-    <section id="home_products" class="flex flex--between">
+    <section id="related_products" class="flex flex--between">
         <div class="col col--12">
-            <h2>Lorem Ipsum Dolor</h2>
+            <h2>Related Products</h2>
         </div>
         <div class="col col--12 col__md--6 col__lg--3">
             <div class="item">
@@ -105,20 +104,9 @@ include 'inc/nav.php';
         </div>
     </section>
 
-    <section id="home_classes" class="flex flex--auto">
-        <div class="col col--12 col__md--4">
-            <div class="feature-side red">
-                <div class="text">
-                    <span>Classes, Workshops, &amp; Demonstrations at Cornell Studio Supply</span>
-                    <p>Brought to you by amazingly talented and awesomely fun instructors!</p>
-                    <a href="" class="button">see class schedule</a>
-                </div>
-            </div>
-        </div>
-        <div class="col col--12 col__md--8 hide_mobile">
-            <div class="featured"></div>
-        </div>
-    </section>
+    <?php
+    include 'inc/classes_widget.php';
+    ?>
 
     <?php
     include 'inc/footer.php';

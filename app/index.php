@@ -34,75 +34,11 @@ include 'inc/nav.php';
         </div>
     </header>
 
-    <section id="home_products" class="flex flex--between">
-        <div class="col col--12">
-            <h2>Lorem Ipsum Dolor</h2>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-        <div class="col col--12 col__md--6 col__lg--3">
-            <div class="item">
-                <a href="">
-                    <img src="img/product.png">
-                    <span class="product_name">Product Name</span>
-                    <span class="price">$5.99</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="home_classes" class="flex flex--auto">
-        <div class="col col--12 col__md--4">
-            <div class="feature-side red">
-                <div class="text">
-                    <span>Classes, Workshops, &amp; Demonstrations at Cornell Studio Supply</span>
-                    <p>Brought to you by amazingly talented and awesomely fun instructors!</p>
-                    <a href="" class="button">see class schedule</a>
-                </div>
-            </div>
-        </div>
-        <div class="col col--12 col__md--8 hide_mobile">
-            <div class="featured"></div>
-        </div>
-    </section>
-
-    <section id="newsletter" class="flex flex--center">
-        <div class="col col--12">
-            <h3>Sign Up For Our Newsletter</h3>
-            <p>Join now for news, classes, and special offers</p>
-            <form class="flex flex--center flex--top">
-                <fieldset>
-                    <input type="email" placeholder="email address">
-                    <button type="submit">subscribe</button>
-                </fieldset>
-            </form>
-        </div>
-    </section>
+    <?php
+    include 'inc/products_widget.php';
+    include 'inc/classes_widget.php';
+    include 'inc/newsletter_widget.php';
+    ?>
 
     <?php
     include 'inc/footer.php';
