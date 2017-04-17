@@ -34,7 +34,7 @@ include 'inc/head.php';
                 </div>
             </fieldset>
 
-            <fieldset class="col--12 col__md--6">
+            <fieldset class="col col--12 col__md--6">
                 <div class="flex flex--between">
                     <div class="col--12">
                         <div class="flex">

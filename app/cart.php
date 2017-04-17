@@ -31,7 +31,10 @@ include 'inc/head.php';
                     <th class="table_price">Price</th>
                   </tr>
                   <tr>
-                    <td class="table_product">C899 Cone 10 Woodfire B Mix</td>
+                    <td class="table_product">
+                      <img src="img/product.png">
+                      <p>C899 Cone 10 Woodfire B Mix</p>
+                    </td>
                     <td class="table_qty">
                       <select name="cart_quantity">
                         <option>0 </option>
@@ -43,7 +46,10 @@ include 'inc/head.php';
                   </tr>
 
                   <tr>
-                    <td class="table_product">C899 Cone 10 Woodfire B Mix</td>
+                    <td class="table_product">
+                      <img src="img/product.png">
+                      <p>C899 Cone 10 Woodfire B Mix</p>
+                    </td>
                     <td class="table_qty">
                       <select name="cart_quantity">
                         <option>0 </option>

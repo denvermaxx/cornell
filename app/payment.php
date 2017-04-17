@@ -39,7 +39,7 @@ include 'inc/head.php';
                 </div>
             </fieldset>
 
-            <fieldset class="col--12 col__md--6">
+            <fieldset class="col col--12 col__md--6">
                 <div class="flex flex--between">
                     <div class="col--12">
                         <div class="flex">
@@ -83,7 +83,7 @@ include 'inc/head.php';
                             <input class="col--12" type="text" id="cardNum" name="CardNumber" placeholder="Card Number" />
                         </div>
                     </div>
-                    <div class="col--12 col__md--6">
+                    <div class="col col--12 col__md--6">
                         <div class="flex">
                             <input class="third" type="text" id="CVV" name="CVV" placeholder="CVV" />
                             <input class="third" type="text" id="expMonth" name="expMonth" placeholder="mm" />
