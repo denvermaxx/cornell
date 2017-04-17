@@ -1,7 +1,7 @@
 <nav class="flex flex--auto">
     <div class="col col--12 col__lg--3">
         <a href="">
-            <img src="img/logo.png" alt="Meares Law">
+            <img src="img/logo.png" alt="Cornell Studio Supply">
         </a>
     </div>
     <div class="col col--12 col__lg--9">
