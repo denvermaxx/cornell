@@ -1214,7 +1214,7 @@ footer {
 
     .sameAsShipping {
         margin-top: 15px;
-        order: -1;
+        // order: -1;
 
         label {
             font-size: 14px;
@@ -1394,6 +1394,10 @@ footer {
         font-size: 13px;
         color: $brown;
         background: #fff;
+    }
+
+    #customer_details, #shipping_details{
+      padding-bottom: 50px;
     }
 }
 
