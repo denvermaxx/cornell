@@ -105,19 +105,22 @@ include 'inc/head.php';
         </section>
 
         <section id="cart_totals_container" class="flex flex--between cart-collaterals">
-            <div class="cart_totals calculated_shipping">
+            <div class="cart_totals calculated_shipping col--12">
               <div class="flex">
                 <span class="page_title col col--12">
                   Cart Total
                 </span>
                 <div class="shop_table shop_table_responsive col col--12">
                   <div class="flex flex--end">
-                  <div class="col--12 col__md--6">
+                  <div class="col--12 col__md--4">
                     <div class="cart-subtotal">
                         <h4>Subtotal</h4>
                         <p data-title="Subtotal"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>73.50</span>
                         </p>
                     </div>
+                  </div>
+
+                  <div class="col--12 col__md--4">
                     <div class="shipping">
                         <h4>Shipping</h4>
                         <p data-title="Shipping">
@@ -173,7 +176,8 @@ include 'inc/head.php';
                         </p>
                     </div>
                   </div>
-                  <div class="col--12 col__md--6">
+
+                  <div class="total_container col--12 col__md--4">
                     <div class="tax-total">
                         <h4>Tax</h4>
                         <p data-title="Tax"><span class="woocommerce-Price-amount amount">

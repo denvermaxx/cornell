@@ -1367,6 +1367,13 @@ footer {
 
 #cart_totals_container{
   padding: 0 0 100px;
+  p{
+    font-size: 24px;
+    margin: 5px 0 15px;
+  }
+  .total_container{
+    text-align: right;
+  }
 }
 
 
