@@ -332,12 +332,140 @@ include 'inc/head.php';
                             </div>
                         </div>
 
-                        <div class="col col--12 col__md--6">
+                        <div class="col col--12">
                             <div class="flex flex--between">
                               <span class="page_title col--12">
                               Your Order
                               </span>
-                              <div id="order_review" class="woocommerce-checkout-review-order">
+
+                                    <div id="cart_totals_container" class="flex">
+                                      <div class="shop_table shop_table_responsive col col--12">
+                                        <div class="flex flex--end">
+                                          <div class="col--12 col__md--4">
+                                            <div class="cart-subtotal">
+                                              <!-- <div class="cart_item">
+                                                <h4>Product Total</h4>
+                                                <span class="product-name">
+                                                    WC401 Cone 10 B Mix&nbsp; <strong class="product-quantity">× 3</strong>
+                                                </span>
+                                                <br />
+                                                <span class="product-total">
+                                                    <span class="discount-info" title="Incl. $6 discount">
+                                                      <span><span class="woocommerce-Price-amount amount">
+                                                        <span class="woocommerce-Price-currencySymbol">$</span>73.50</span>
+                                                      </span>
+                                                      <span class="new-price"> (Incl. $6 discount)</span>
+                                                    </span>
+                                                </span>
+                                                <br />
+                                              </div> -->
+
+                                              <h4>Subotal</h4>
+                                              <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>73.50</span>
+                                            </div>
+                                          </div>
+
+                                        <div class="col--12 col__md--4">
+                                          <div class="shipping">
+                                              <h4>Shipping</h4>
+                                              <p data-title="Shipping">
+                                                  <ul id="shipping_method">
+                                                      <li>
+                                                          <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_local_pickup1" value="local_pickup:1" class="shipping_method" checked="checked">
+                                                          <label for="shipping_method_0_local_pickup1">Local pickup</label>
+                                                      </li>
+                                                      <li>
+                                                          <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_uspsflat_rate_box_priority" value="usps:flat_rate_box_priority" class="shipping_method">
+                                                          <label for="shipping_method_0_uspsflat_rate_box_priority">Priority Mail Flat Rate®:
+                                                            <span class="woocommerce-Price-amount amount">
+                                                              <span class="woocommerce-Price-currencySymbol">$</span>19.35</span>
+                                                          </label>
+                                                      </li>
+                                                      <li>
+                                                          <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_uspsflat_rate_box_express" value="usps:flat_rate_box_express" class="shipping_method">
+                                                          <label for="shipping_method_0_uspsflat_rate_box_express">Priority Mail Express Flat Rate®:
+                                                            <span class="woocommerce-Price-amount amount">
+                                                              <span class="woocommerce-Price-currencySymbol">$</span>71.25</span>
+                                                          </label>
+                                                      </li>
+                                                  </ul>
+                                              </p>
+                                          </div>
+                                        </div>
+
+                                        <div class="total_container col--12 col__md--4">
+                                          <div class="tax-total">
+                                              <h4>Tax</h4>
+                                              <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>4.23</span>
+                                          </div>
+
+                                          <br />
+                                          <div class="order-total">
+                                              <h4>Total</h4>
+                                              <p data-title="Total"><strong><span class="woocommerce-Price-amount amount">
+                                                <span class="woocommerce-Price-currencySymbol">$</span>77.73</span></strong>
+                                              </p>
+                                          </div>
+                                        </div>
+
+                                        <div id="payment" class="col--12 woocommerce-checkout-payment">
+                                          <h4>Payment</h4>
+                                            <ul class="wc_payment_methods payment_methods methods">
+                                                <li class="wc_payment_method payment_method_cod">
+                                                    <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked="checked" data-order_button_text="">
+
+                                                    <label for="payment_method_cod">
+                                                  		Pay at Pickup
+                                                    </label>
+
+                                                    <div class="payment_box payment_method_cod">
+                                                        <p>Pay when you pick up your order at the store.</p>
+                                                    </div>
+                                                </li>
+
+                                                <li class="wc_payment_method payment_method_stripe">
+                                                    <input id="payment_method_stripe" type="radio" class="input-radio" name="payment_method" value="stripe" data-order_button_text="Continue to payment">
+
+                                                    <label for="payment_method_stripe">
+                                                  		Credit Card (Stripe)
+                                                      <img src="https://cornellstudio.dev/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg" alt="Visa" width="32" style="margin-left: 0.3em">
+                                                      <img src="https://cornellstudio.dev/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg" alt="Mastercard" width="32" style="margin-left: 0.3em">
+                                                      <img src="https://cornellstudio.dev/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg" alt="Amex" width="32" style="margin-left: 0.3em">
+                                                      <img src="https://cornellstudio.dev/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg" alt="Discover" width="32" style="margin-left: 0.3em">
+                                                      <img src="https://cornellstudio.dev/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg" alt="JCB" width="32" style="margin-left: 0.3em">
+                                                      <img src="https://cornellstudio.dev/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg" alt="Diners" width="32" style="margin-left: 0.3em">
+                                                    </label>
+                                                    <div class="payment_box payment_method_stripe" style="display:none;">
+                                                        <div id="stripe-payment-data" data-panel-label="" data-description="" data-email="brian@cratosdesign.com" data-amount="7773" data-name="Cornell Studio Supply" data-currency="usd" data-image="" data-bitcoin="false" data-locale="en" data-allow-remember-me="false">
+                                                            <p>
+                                                              Pay with your credit card via Stripe. TEST MODE ENABLED. In test mode, you can use the card number 4242424242424242 with any CVC and a valid expiration date or check the documentation "<a href="https://stripe.com/docs/testing">Testing Stripe</a>"
+                                                                for more card numbers.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="form-row place-order">
+                                              <noscript>
+                                          			Since your browser does not support JavaScript, or it is disabled, please ensure you click the &lt;em&gt;Update Totals&lt;/em&gt; button before placing your order. You may be charged more than the amount stated above if you fail to do so.			&lt;br/&gt;&lt;input type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
+                                          		</noscript>
+
+                                              <!-- <input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order"> -->
+
+                                              <input type="hidden" id="_wpnonce" name="_wpnonce" value="07d3ee0020">
+                                              <input type="hidden" name="_wp_http_referer" value="/checkout/?wc-ajax=update_order_review">
+                                          </div>
+                                        </div>
+
+                                      <div class="wc-proceed-to-checkout">
+                                          <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
+                                            Proceed to checkout <span>&rsaquo;</span>
+                                          </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                              <!-- <div id="order_review" class="col--12 woocommerce-checkout-review-order">
                                   <table class="shop_table woocommerce-checkout-review-order-table">
                                       <thead>
                                           <tr>
@@ -355,7 +483,7 @@ include 'inc/head.php';
                                                     <span><span class="woocommerce-Price-amount amount">
                                                       <span class="woocommerce-Price-currencySymbol">$</span>73.50</span>
                                                     </span>
-                                                    <span class="new-price" style="color: #4AB915; font-weight: bold;"> (Incl. $6 discount)</span>
+                                                    <span class="new-price"> (Incl. $6 discount)</span>
                                                   </span>
                                               </td>
                                           </tr>
@@ -463,7 +591,7 @@ include 'inc/head.php';
                                         <input type="hidden" name="_wp_http_referer" value="/checkout/?wc-ajax=update_order_review">
                                     </div>
                                   </div>
-                              </div>
+                              </div> -->
                     </form>
                   </div>
                 </section>

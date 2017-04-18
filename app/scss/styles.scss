@@ -916,7 +916,6 @@ footer {
     }
 }
 
-
 .page_title {
     font-size: 36px;
     font-weight: 300;
@@ -1061,10 +1060,10 @@ footer {
                 float: none;
             }
         }
+    }
 
-        .new-price {
-            color: $red;
-        }
+    .new-price {
+        color: $red;
     }
     $breakpoint-alpha: 768px; // adjust to your needs
 
@@ -1215,7 +1214,6 @@ footer {
     .sameAsShipping {
         margin-top: 15px;
         // order: -1;
-
         label {
             font-size: 14px;
             color: #742b02;
@@ -1367,8 +1365,15 @@ footer {
     }
 }
 
-.coupon_container{
-  padding-bottom: 25px;
+#shipping_method {
+    li {
+        padding: 0 0 5px;
+        font-size: 14px;
+    }
+}
+
+.coupon_container {
+    padding-bottom: 25px;
 }
 
 #billing_info {
@@ -1376,9 +1381,15 @@ footer {
         padding: 0;
         margin: 0;
     }
-    input{
-      width: 100%;
+
+    input {
+        width: 100%;
     }
+
+    input[type="radio"] {
+        width: auto;
+    }
+
     select {
         margin-top: 15px;
         height: 38px;
@@ -1396,8 +1407,9 @@ footer {
         background: #fff;
     }
 
-    #customer_details, #shipping_details{
-      padding-bottom: 50px;
+    #customer_details,
+    #shipping_details {
+        padding-bottom: 50px;
     }
 }
 
@@ -1411,6 +1423,18 @@ footer {
 
     .total_container {
         text-align: right;
+    }
+}
+
+#payment {
+    padding-top: 25px;
+    margin-top: 15px;
+    border-top: 1px solid transparentize($brown, 0.8);
+    li.wc_payment_method{
+      padding: 10px 0;
+    }
+    p {
+        font-size: 13px;
     }
 }
 
