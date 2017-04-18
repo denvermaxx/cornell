@@ -918,7 +918,7 @@ footer {
 
 #cart,
 #checkout,
-#login {
+#login, #cart_totals_container {
     padding-top: 25px;
 
     .page_title {
@@ -945,6 +945,8 @@ footer {
 
     form {
         // height: 40px;
+        width: 100%;
+
         select {
             //cart_quantity
             width: 100%;
@@ -961,51 +963,194 @@ footer {
         vertical-align: middle;
         width: 100%;
 
+        table{        border-collapse: collapse;
+                vertical-align: middle;
+                width: 100%;
+              }
+
         tr {
-          &:nth-child(odd){
-            background: transparentize($black, 0.98);
-          }
-          th{
-            background: $brown;
-          }
+          width: 100%;
+            &:nth-child(odd) {
+                background: transparentize($black, 0.98);
+            }
+
+            th {
+                background: $brown;
+                font-size: 12px;
+            }
+
             td,
             th {
                 width: auto;
-                border: 1px solid transparentize($brown, 0.8);
             }
 
             th {
                 padding: 10px 0 !important;
             }
+            // td{
+            //   font-size: 10px;
+            // }
         }
 
-      p{
-        display: inline;
-        margin: 0;
-        padding: 15px 0px;
-        float: left;
-      }
-        img{
-          max-width: 75px;
-          float: left;
+        p {
+            display: inline;
+            margin: 0;
+            padding: 15px 0;
+            float: left;
+            padding: 28px 0;
+            float: left;
+            margin-left: 15px;
+
+        }
+
+        img {
+            max-width: 75px;
+            float: left;
         }
 
         .table_product {
-            width: 70%;
-            padding: 15px;
+            width: 100%;
+            padding: 15px 0;
+            float: left;
+        }
+
+        td.table_product a {
+            color: $black;
         }
 
         .table_price {
-            width: 15%;
-            text-align: center;
-            padding: 15px;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid transparentize($brown, 0.8);
+            float: left;
         }
 
         .table_qty {
-            width: 15%;
-            padding: 15px;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid transparentize($brown, 0.8);
+            float: left;
+        }
+        input.qty{
+          width: 100%;
+          max-width: 50px;
+          border: 1px #742b02 solid;
+          padding: 5px;
+        }
+
+        .product_price {
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid transparentize($brown, 0.8);
+            float: left;
+
+        }
+
+        .table_remove_product {
+            width: 100%;
+            padding: 15px 0;
+            font-size: 20px;
+            font-weight: 700;
+            border-top: 1px solid transparentize($brown, 0.8);
+            float: left;
+            img {
+                float: none;
+            }
+        }
+
+        .new-price {
+            color: $red;
         }
     }
+
+    $breakpoint-alpha: 768px; // adjust to your needs
+    .rwd-table {
+      tr {
+        // border-top: 1px solid #ddd;
+        // border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+      }
+
+      td {
+        display: block;
+        //
+        // &:first-child {
+        //   padding-top: .5em;
+        // }
+        // &:last-child {
+        //   padding-bottom: .5em;
+        // }
+
+        &:before {
+          content: attr(data-th); // who knew you could do this? The internet, that's who.
+          font-weight: bold;
+          font-size: 16px;
+          padding-bottom: 15px;
+
+          // optional stuff to make it look nicer
+          width: 100%; // magic number :( adjust according to your own content
+          display: inline-block;
+          // end options
+
+          @media (min-width: $breakpoint-alpha) {
+            display: none;
+          }
+        }
+      }
+
+      th, td {
+
+        @media (min-width: $breakpoint-alpha) {
+          display: table-cell;
+
+            tr, td {
+              border: none;
+            }
+          // padding: .25em .5em;
+          //
+          // &:first-child {
+          //   padding-left: 0;
+          // }
+          //
+          // &:last-child {
+          //   padding-right: 0;
+          // }
+        }
+      }
+
+      .cart_item{
+        &:nth-child(odd){
+          background: transparentize($black, .95);;
+        }
+      }
+
+      .coupon_container{
+        border: none;
+
+        button{
+          width: auto;
+        }
+        .actions{
+          width: 100%;
+            border: none;
+      }
+      .coupon{
+        padding: 15px 0;
+        float: left;
+        width: 100%;
+        input{
+          margin: 10px 0 0;
+        }
+      }
+
+    }
+  }
+
+
+
 
     .button_container {
         justify-content: flex-end;
@@ -1038,7 +1183,8 @@ footer {
         }
     }
 
-    input[type="email"], input[type="password"],
+    input[type="email"],
+    input[type="password"],
     input[type="text"] {
         margin-top: 15px;
         border: 1px $brown solid;
@@ -1063,110 +1209,106 @@ footer {
         width: 100%;
     }
 
+    .sameAsShipping {
+        margin-top: 15px;
+        order: -1;
 
+        label {
+            font-size: 14px;
+            color: #742b02;
+            line-height: 21px;
+        }
+        /* Base for label styling */
+        [type="checkbox"]:checked,
+        [type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+            // position: relative;
+            // left: -206px;
+            // top: 28px;
+        }
 
-    .sameAsShipping{
-      margin-top: 15px;
-      order:-1;
+        [type="checkbox"]:checked + label,
+        [type="checkbox"]:not(:checked) + label {
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+        /* checkbox aspect */
+        [type="checkbox"]:checked + label:before,
+        [type="checkbox"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            background: #fff;
+            border-radius: 0;
+            border: 1px solid $brown;
+        }
+        /* checked mark aspect */
+        [type="checkbox"]:checked + label:after,
+        [type="checkbox"]:not(:checked) + label:after {
+            content: '✔';
+            position: absolute;
+            top: 0.1em;
+            left: 0.3em;
+            font-size: 1.3em;
+            line-height: 0.8;
+            color: $brown;
+            transition: all 0.15s;
+        }
+        /* checked mark aspect changes */
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            transform: scale(0);
+        }
 
-      label{
-        font-size: 14px;
-        color: #742b02;
-        line-height: 21px;
-      }
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* disabled checkbox */
+        [type="checkbox"]:disabled:checked + label:before,
+        [type="checkbox"]:disabled:not(:checked) + label:before {
+            box-shadow: none;
+            border-color: #bbb;
+            background-color: #ddd;
+        }
 
-    /* Base for label styling */
-    [type="checkbox"]:checked,
-    [type="checkbox"]:not(:checked) {
-        position: absolute;
-        left: -9999px;
-        // position: relative;
-        // left: -206px;
-        // top: 28px;
-    }
+        [type="checkbox"]:disabled:checked + label:after {
+            color: #999;
+        }
 
-    [type="checkbox"]:checked + label,
-    [type="checkbox"]:not(:checked) + label {
-        position: relative;
-        padding-left: 35px;
-        cursor: pointer;
+        [type="checkbox"]:disabled + label {
+            color: #aaa;
+        }
+        /* accessibility */
+        [type="checkbox"]:checked:focus + label:before,
+        [type="checkbox"]:not(:checked):focus + label:before {
+            border: 2px solid red;
+        }
     }
-    /* checkbox aspect */
-    [type="checkbox"]:checked + label:before,
-    [type="checkbox"]:not(:checked) + label:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #ccc;
-        background: #fff;
-        border-radius: 0;
-        border: 1px solid $brown;
-    }
-    /* checked mark aspect */
-    [type="checkbox"]:checked + label:after,
-    [type="checkbox"]:not(:checked) + label:after {
-        content: '✔';
-        position: absolute;
-        top: 0.1em;
-        left: 0.3em;
-        font-size: 1.3em;
-        line-height: 0.8;
-        color: $brown;
-        transition: all 0.15s;
-    }
-    /* checked mark aspect changes */
-    [type="checkbox"]:not(:checked) + label:after {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    [type="checkbox"]:checked + label:after {
-        opacity: 1;
-        transform: scale(1);
-    }
-    /* disabled checkbox */
-    [type="checkbox"]:disabled:checked + label:before,
-    [type="checkbox"]:disabled:not(:checked) + label:before {
-        box-shadow: none;
-        border-color: #bbb;
-        background-color: #ddd;
-    }
-
-    [type="checkbox"]:disabled:checked + label:after {
-        color: #999;
-    }
-
-    [type="checkbox"]:disabled + label {
-        color: #aaa;
-    }
-    /* accessibility */
-    [type="checkbox"]:checked:focus + label:before,
-    [type="checkbox"]:not(:checked):focus + label:before {
-        border: 2px solid red;
-    }
-  }
-
 
     #payment_info {
         width: 100%;
         padding-top: 50px;
 
         #payment_type {
-          > .flex{
-            border: 1px solid transparentize($brown, 0);
-            padding: 15px;
-          }
+            > .flex {
+                border: 1px solid transparentize($brown, 0);
+                padding: 15px;
+            }
 
-          h4{
-            font-size: 13px;
-            padding-bottom: 15px;
-            letter-spacing: 0.05em;
-            font-weight: 300;
-            color:$brown;
-          }
+            h4 {
+                font-size: 13px;
+                padding-bottom: 15px;
+                letter-spacing: 0.05em;
+                font-weight: 300;
+                color: $brown;
+            }
 
             input[type="radio"] {
                 display: inline-block;
@@ -1178,10 +1320,12 @@ footer {
             input[type="radio"]:checked + label {
                 border: 1px solid $black;
             }
-            label{
-              width: calc(20% - 11px);
-              padding: 5px;
+
+            label {
+                width: calc(20% - 11px);
+                padding: 5px;
             }
+
             img {
                 // height: 35px;
                 width: 100%;
@@ -1210,6 +1354,22 @@ footer {
     }
 }
 
+
+.link_button{
+  font-size: 14px;
+  line-height: 22px;
+  span{
+    font-size: 20px;
+    margin-top: 1px;
+  }
+}
+
+
+#cart_totals_container{
+  padding: 0 0 100px;
+}
+
+
 #login {
     #password,
     #username {
@@ -1220,8 +1380,9 @@ footer {
         // display: block;
         align-items: center;
         height: 100%;
-        span{
-          padding: 50px 0;
+
+        span {
+            padding: 50px 0;
         }
     }
 }
@@ -1251,11 +1412,14 @@ footer {
         width: calc(50% - 30px);
         text-align: left;
     }
+
+
 }
 @media only screen and (min-width: 543px) {
-  #cart .cart_table p {padding: 28px 15px;}
+    #cart .cart_table p {
+        padding: 28px 15px;
+    }
 }
-
 @media only screen and (min-width: 768px) {
     nav {
         padding: 50px 0;
@@ -1517,25 +1681,82 @@ footer {
     #cart,
     #checkout,
     #login {
-      margin: 0 auto;
+        margin: 0 auto;
         padding: 0 0 100px;
 
         .half {
             width: calc(50% - 8px);
         }
+
         #CVV,
         #first {
             margin-right: 15px;
         }
-        .sameAsShipping{
-          order: 1;
+
+        .sameAsShipping {
+            order: 1;
         }
 
-        #payment_info #payment_type label{
-          width: calc(20% - 21px);
-          padding: 10px;
+        #payment_info #payment_type label {
+            width: calc(20% - 21px);
+            padding: 10px;
         }
     }
+
+
+
+    #cart .cart_table{
+        .table_product {
+            width: 60%;
+            padding: 15px;
+            float: none;
+            border-top:none;
+        }
+
+        td.table_product a {
+            color: $black;
+        }
+
+        .table_price {
+            width: 15%;
+            text-align: center;
+            padding: 15px;
+            border-top:none;
+            float: none;
+        }
+
+        .table_qty {
+            width: 10%;
+            padding: 15px;
+            border-top:none;
+            float: none;
+        }
+        input.qty{
+          width: 100%;
+        }
+
+        .product_price {
+            width: 10%;
+            padding: 15px;
+            text-align: center;
+            border-top:none;
+            float: none;
+        }
+
+        .table_remove_product {
+            text-align: center;
+            width: 5%;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            border-top:none;
+            float: none;
+
+            img {
+                float: none;
+            }
+        }
+      }
 
 }
 @media only screen and (min-width: 960px) {
@@ -1553,6 +1774,8 @@ footer {
     .hide_mobile {
         display: block;
     }
-    #checkout #payment_info #payment_type img{max-width: 70px;}
 
+    #checkout #payment_info #payment_type img {
+        max-width: 70px;
+    }
 }
